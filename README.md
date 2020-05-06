@@ -46,13 +46,13 @@ I'd like my bookmarks to show in a list
 
 As a user,
 So that add new bookmarks,
-I want add to the bookmarks list via a form. 
+I want add to the bookmarks list via a form.
 
 As a user
 So I can store bookmark data for later retrieval
 I want to add a bookmark to Bookmark Manager
 
-3. 
+3.
 
 # Domain Model #
 
@@ -64,15 +64,15 @@ bookmarks   | show list of bookmarks
 homepage    | have button that directs to ALL
 
 /bookmarks  | erb:views
-            | Add form with submit button 
-            
+            | Add form with submit button
+
 
 
 database    | id / URL
 
 ////
 
-# Database # 
+# Database #
 
 1. Connect to psql
 2. Create the database using the psql command CREATE DATABASE bookmark_manager;
@@ -82,8 +82,9 @@ database    | id / URL
 3. Connect to the database using the pqsl command \c bookmark_manager_test;
 4. Run the query we have saved in the file 01_create_bookmarks_table.sql
 
+5. ALTER the table in database in psql - saved in file: db/migrations/02_add_title_to_bookmarks.sql
+
 
 # PG #
 
 # Test Environment and Production Environment #
-
