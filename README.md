@@ -36,7 +36,7 @@ I'd like <Task>.
 
 ////
 
-1 . Show a list of bookmarks:
+1. Show a list of bookmarks:
 
 As the user,
 So that I can view quickly all my bookmarks,
@@ -48,6 +48,12 @@ As a user,
 So that add new bookmarks,
 I want add to the bookmarks list via a form. 
 
+As a user
+So I can store bookmark data for later retrieval
+I want to add a bookmark to Bookmark Manager
+
+3. 
+
 # Domain Model #
 
 Object      | Message
@@ -58,9 +64,11 @@ bookmarks   | show list of bookmarks
 homepage    | have button that directs to ALL
 
 /bookmarks  | erb:views
-            |
+            | Add form with submit button 
+            
 
-database    |
+
+database    | id / URL
 
 ////
 
@@ -73,3 +81,9 @@ database    |
 4. Run the query we have saved in the file 01_create_bookmarks_table.sql
 3. Connect to the database using the pqsl command \c bookmark_manager_test;
 4. Run the query we have saved in the file 01_create_bookmarks_table.sql
+
+
+# PG #
+
+# Test Environment and Production Environment #
+
