@@ -58,6 +58,12 @@ As a user
 So I can remove my bookmark from Bookmark Manager
 I want to delete a bookmark
 
+4. Update bookmarks
+
+As a user
+So I can change bookmark info 
+I want to update a bookmark
+
 # Domain Model #
 
 Object      | Message
@@ -92,3 +98,26 @@ database    | id / URL
 # PG #
 
 # Test Environment and Production Environment #
+
+# SQL Commands # 
+
+# REST #
+
+Update Bookmarks Example: 
+
+Here's the user flow for updating a bookmark:
+
+- Visit the 'update bookmark' form for a particular bookmark.
+- Fill in the form with new data – say, a new title – and submit it.
+- See the homepage, with the updated bookmark title (and the old one is gone).
+
+Capybara flow: 
+- /bookmarks 
+> Click edit 
+- /bookmarks/#{bookmark.id}/edit
+> Fill in new info
+- /bookmarks root 
+* Page should not have old info and be showing new info 
+
+
+
