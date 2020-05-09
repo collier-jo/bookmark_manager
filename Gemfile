@@ -10,6 +10,7 @@ gem 'capybara'
 gem 'simplecov', require: false
 gem 'simplecov-console', require: false
 gem 'pg' 
+gem 'sinatra-flash'
 
 group :development, :test do
   gem "rubocop", "0.79.0"

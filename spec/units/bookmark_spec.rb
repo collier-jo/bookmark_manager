@@ -58,4 +58,11 @@ describe Bookmark do
       expect(updated_bookmark.url).to eq 'http://www.snakersacademy.com'
     end 
   end
-end 
+
+  describe '.create' do 
+    it 'does not create an invalid URL' do 
+      Bookmark.create(url: 'not a real bookmark', title: 'noy a real bookmark')
+      expect(Bookmark.all).to be_empty
+    end 
+  end 
+end  
