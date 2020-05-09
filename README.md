@@ -42,11 +42,17 @@ As the user,
 So that I can view quickly all my bookmarks,
 I'd like my bookmarks to show in a list
 
-2. Add new bookmarks 🚧
+2. Add new bookmarks 
 
 As a user,
 So that add new bookmarks,
 I want add to the bookmarks list via a form.
+
+    > Only ever store valid URL's 
+
+    As a user,
+    So I do not save wrong bookmarks 
+    I'd like the Bookmark Manager to validate bookmarks added   
 
 As a user
 So I can store bookmark data for later retrieval
@@ -64,7 +70,7 @@ As a user
 So I can change bookmark info 
 I want to update a bookmark
 
-# Domain Model #
+# Domain Model (RESTFUL approach)#
 
 Object      | Message
 ____________|_______________
@@ -119,5 +125,15 @@ Capybara flow:
 - /bookmarks root 
 * Page should not have old info and be showing new info 
 
+# ORM #
 
+https://github.com/makersacademy/course/blob/master/bookmark_manager/walkthroughs/14.md
+
+1. Extract the database connection logic to an object, DatabaseConnection.
+2. Use DatabaseConnection to set up a persistent connection to the correct database, with a method setup.
+3. Wrap PG's exec method with a method, DatabaseConnection.query, that executes queries on the database.
+4. Replace Bookmark calls to PG.connect and connection with calls to DatabaseConnection.query.
+
+
+# Sinatra-Flash #
 
