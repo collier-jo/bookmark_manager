@@ -70,6 +70,12 @@ As a user
 So I can change bookmark info 
 I want to update a bookmark
 
+5. Comment on bookmarks
+
+As a user 
+So I can make comments on bookmarks 
+I would like a comment function 
+
 # Domain Model (RESTFUL approach)#
 
 Object      | Message
@@ -99,6 +105,14 @@ database    | id / URL
 4. Run the query we have saved in the file 01_create_bookmarks_table.sql
 
 5. ALTER the table in database in psql - saved in file: db/migrations/02_add_title_to_bookmarks.sql
+
+6. Create the new comments database using the command CREATE DATABASE bookmark_manager;
+Connect to the database using the pqsl command \c bookmark_manager_test
+Run the query we have saved in the file 03_add_comments_table.sql
+Create the new comments database using the command CREATE DATABASE bookmark_manager_test;
+Connect to the database using the pqsl command \c bookmark_manager_test
+Run the query we have saved in the file 03_add_comments_table.sql
+
 
 
 # PG #
